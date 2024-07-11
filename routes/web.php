@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CarController;
-
+use App\Http\Controllers\carController;
 
 
 Route::get('/', function () {
@@ -12,7 +11,6 @@ Route::get('/app', function () {
 return view('app' );
 });
 
-Route::post('/save-car', [CarController::class, 'saveCar']);
-Route::post('/save-car', [CarController::class, 'saveCar']);
-Route::post('/get-cars', [CarController::class, 'getCars']);
-Route::post('/delete-car', [CarController::class, 'deleteCar']);
+Route::post('/save-car', [carController::class, 'saveCar']);
+Route::post('/get-cars', [carController::class, 'getCars']);
+Route::post('/delete-car', [carController::class, 'deleteCar']);

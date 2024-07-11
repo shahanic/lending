@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Car;
 
-class CarController extends Controller
+class carController extends Controller
 {
+   
     public function saveCar(Request $request){
         if($request->car_id){
             $car = Car::find($request->car_id);
         }else{
             $car = new Car;
         }
-        $car = new Car;
         $car->brand = $request->brand;
         $car->model = $request->model;
         $car->year_bought = $request->year_bought;
@@ -30,3 +30,5 @@ class CarController extends Controller
         return 1;
     }
 }
+
+

@@ -17,9 +17,10 @@ export const carStore = defineStore ('car', {
     actions:{
         save(){
             let {form} = this;
-            axios.post('/save-car', form).then(({data})=>{
+            axios.post('/save-car', this.form).then(({data})=>{
                 this.$reset();
                 this.getter();
+                console.log(data)
             }).catch(error => {
                 console.error(error);
                 alert('An error occurred while saving the car.');
@@ -31,7 +32,7 @@ export const carStore = defineStore ('car', {
                 this.cars = data;
             }).catch(error => {
                 console.error(error);
-                alert('An error occurred while saving the car.');
+                alert('An error occurred while getting the car.');
             });
         },
         editCar(car){

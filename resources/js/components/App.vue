@@ -1,12 +1,12 @@
 <script setup>
 
 import Form from './Form.vue';
-//import Table from './Table.vue';
+import Table from './Table.vue';
 
 </script>
 <template>
     <div>
         <Form />
-        <!-- <Table /> -->
+        <Table />
     </div>
 </template>
